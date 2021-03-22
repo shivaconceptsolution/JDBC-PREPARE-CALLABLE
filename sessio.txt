@@ -1,0 +1,66 @@
+JDBC
+
+1)  Statement  :- 
+
+we will pass SQL query using normal sql statement, we can not pass data using parameter, alll data will be substitute under SQL statement for insertion, updation and deletion.
+
+JDBC provide Statement Interface to manage statement operation, we will write all SQL query under executeUpdate() and executeQuery().
+
+
+2)  PreparedStatement:-
+
+we will pass SQL query using parameters, alll data will be pass as an parameter  under SQL statement for insertion, updation and deletion.
+
+JDBC provide PreparedStatement Interface to manage sql statement operation, we will write all SQL query under prepareStatement().
+
+3)  Callable Statement:-
+
+we will write SQL query under stored procedure, alll data will be pass as an parameter  under callable statement function parameters for insertion, updation and deletion.
+
+JDBC provide CallableStatement Interface to manage sql statement operation, we will  call procedure  under callableStatement().
+
+
+StoredProcedure:-  it is pre-compile block of code of SQL that will be directly executed.it's performance is btter as compare to normal SQL query, hence we always prefer callable statement in project for database operation.
+
+Syntax of Stored Procedure:-
+
+create procedure procedurename as
+   SQL Statement
+
+DELIMITER //
+
+CREATE PROCEDURE ViewAllStudents()
+
+BEGIN
+
+	SELECT *  FROM student;
+
+END //
+
+DELIMITER ;
+
+
+Procedure of Data Insertion?
+
+DELIMITER //
+
+CREATE PROCEDURE InsertStudent(r int,s varchar(50),b varchar(50),f int)
+
+BEGIN
+
+	insert into  tbl_student VALUES(r,s,b,f);
+
+END //
+
+DELIMITER ;
+
+
+
+What is JSP and Servlet?
+
+JSP is used to create Design interface in Java Web application, JSP means Java Server Page.
+
+Servlet is used to write program code on Java Web Application. Servlet will contain  service() to handle request from web server.
+
+doGet() and doPost().
+
